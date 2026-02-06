@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register • MovieHub</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/register.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="index.html"><span class="brand__dot"></span><span>MovieHub</span></a>
+
+      <nav class="topbar__nav">
+        <button id="themeToggle" class="iconbtn" aria-label="Toggle theme"><span id="themeIcon">🌙</span></button>
+        <a class="btn btn--ghost" href="index.html">Home</a>
+        <a class="btn btn--primary" href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="auth">
+      <div class="panel">
+        <div class="panel__pad">
+          <h1>Create your account</h1>
+          <p>Register to rate movies and manage your reviews.</p>
+
+          <div class="divider"></div>
+
+          <form id="registerForm" class="form" novalidate>
+            <div class="row">
+              <label class="label" for="username">Username</label>
+              <input id="username" class="field" type="text" placeholder="Your name" required />
+              <div id="userErr" class="err hidden"></div>
+            </div>
+
+            <div class="row">
+              <label class="label" for="email">Email</label>
+              <input id="email" class="field" type="email" placeholder="you@example.com" required />
+              <div id="emailErr" class="err hidden"></div>
+            </div>
+
+            <div class="row">
+              <label class="label" for="password">Password</label>
+              <input id="password" class="field" type="password" placeholder="Min 6 characters" required />
+              <div id="passErr" class="err hidden"></div>
+            </div>
+
+            <div class="row">
+              <label class="label" for="confirm">Confirm password</label>
+              <input id="confirm" class="field" type="password" placeholder="Repeat password" required />
+              <div id="confErr" class="err hidden"></div>
+            </div>
+
+            <div class="actions">
+              <button id="registerBtn" class="btn btn--primary" type="submit">Register</button>
+              <a class="smalllink" href="login.html">Already have an account? Login →</a>
+            </div>
+
+            <div id="formErr" class="err hidden"></div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panel side">
+        <div class="side__inner">
+          <h2 style="margin:0 0 6px;">Why register?</h2>
+          <p class="help">You can create your own rating and review (private to your account) and edit anytime.</p>
+
+          <div class="kpi">
+            <div><strong>Secure Passwords</strong><span>Stored as hash with bcrypt</span></div>
+            <div><strong>JWT Sessions</strong><span>Private endpoints protected</span></div>
+            <div><strong>Clean UI</strong><span>Netflix-like design + theme switch</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/authPages.js"></script>
+</body>
+</html>
